@@ -17,3 +17,7 @@
 - [listing all certificates](letsencrypt/1672258156.listing-all-certificates.md)
 - [delete an individual certificate](letsencrypt/1671645191.delete-individual-certificate.md)
 
+### linux
+- [create and mount encrypted disk image](linux/1672085858.create-and-mount-luks-disk-image-file.md)
+
+
