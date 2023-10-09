@@ -1,0 +1,452 @@
+
+mc alias set minio http://127.0.0.1:9000  rob beerbeer
+
+rob@minio-test:~$ mc ls minio
+rob@minio-test:~$ mc mb minio/public1
+Bucket created successfully `minio/public1`.
+rob@minio-test:~$ 
+
+rob@minio-test:~$ mc anonymous set download minio/public1
+Access permission for `minio/public1` is set to `download`
+rob@minio-test:~$ 
+
+rob@minio-test:~$ mc admin info minio --json
+{
+    "status": "success",
+    "info": {
+        "mode": "online",
+        "deploymentID": "326c3b5e-70d3-462c-9d66-c1d2cb138336",
+        "buckets": {
+            "count": 1
+        },
+        "objects": {
+            "count": 1
+        },
+        "versions": {
+            "count": 0
+        },
+        "deletemarkers": {
+            "count": 0
+        },
+        "usage": {
+            "size": 328
+        },
+        "services": {
+            "kms": {
+                "status": "disabled"
+            },
+            "ldap": {}
+        },
+        "backend": {
+            "backendType": "Erasure",
+            "onlineDisks": 4,
+            "offlineDisks": 0,
+            "standardSCParity": 1,
+            "rrSCParity": 1,
+            "totalSets": [
+                1
+            ],
+            "totalDrivesPerSet": [
+                4
+            ]
+        },
+        "servers": [
+            {
+                "state": "online",
+                "endpoint": "127.0.0.1:9000",
+                "uptime": 2226,
+                "version": "2023-09-30T07:02:29Z",
+                "commitID": "22d2dbc4e68a20ada8c82edf1cc68026e7b0e3d6",
+                "network": {
+                    "127.0.0.1:9000": "online"
+                },
+                "drives": [
+                    {
+                        "endpoint": "/mnt/disk1",
+                        "path": "/mnt/disk1",
+                        "state": "ok",
+                        "uuid": "479ceca0-ee42-4645-8b34-26de629e6238",
+                        "major": 252,
+                        "minor": 16,
+                        "totalspace": 2136997888,
+                        "usedspace": 48951296,
+                        "availspace": 2088046592,
+                        "metrics": {
+                            "lastMinute": {
+                                "Delete": {
+                                    "count": 6,
+                                    "acc_time_ns": 442419
+                                },
+                                "DiskInfo": {
+                                    "count": 5,
+                                    "acc_time_ns": 2602769
+                                },
+                                "ListVols": {
+                                    "count": 1,
+                                    "acc_time_ns": 99012
+                                },
+                                "ReadXL": {
+                                    "count": 3,
+                                    "acc_time_ns": 344607
+                                },
+                                "RenameData": {
+                                    "count": 4,
+                                    "acc_time_ns": 26331377
+                                },
+                                "StatVol": {
+                                    "count": 2,
+                                    "acc_time_ns": 16223
+                                }
+                            },
+                            "apiCalls": {
+                                "AppendFile": 0,
+                                "CheckParts": 0,
+                                "CreateFile": 0,
+                                "Delete": 217,
+                                "DeleteAbandonedParts": 0,
+                                "DeleteVersion": 0,
+                                "DeleteVersions": 0,
+                                "DeleteVol": 0,
+                                "DiskInfo": 204,
+                                "ListDir": 0,
+                                "ListVols": 44,
+                                "MakeVol": 1,
+                                "MakeVolBulk": 1,
+                                "ReadAll": 1,
+                                "ReadFile": 0,
+                                "ReadFileStream": 0,
+                                "ReadMultiple": 0,
+                                "ReadVersion": 0,
+                                "ReadXL": 142,
+                                "RenameData": 150,
+                                "RenameFile": 1,
+                                "StatInfoFile": 0,
+                                "StatVol": 138,
+                                "UpdateMetadata": 0,
+                                "VerifyFile": 0,
+                                "WalkDir": 34,
+                                "WriteAll": 1,
+                                "WriteMetadata": 0
+                            }
+                        },
+                        "used_inodes": 62,
+                        "free_inodes": 1048514,
+                        "pool_index": 0,
+                        "set_index": 0,
+                        "disk_index": 0
+                    },
+                    {
+                        "endpoint": "/mnt/disk2",
+                        "path": "/mnt/disk2",
+                        "state": "ok",
+                        "uuid": "b11c2105-59e2-41db-a725-fd12af0be8d3",
+                        "major": 252,
+                        "minor": 32,
+                        "totalspace": 2136997888,
+                        "usedspace": 48951296,
+                        "availspace": 2088046592,
+                        "metrics": {
+                            "lastMinute": {
+                                "Delete": {
+                                    "count": 6,
+                                    "acc_time_ns": 462372
+                                },
+                                "DiskInfo": {
+                                    "count": 5,
+                                    "acc_time_ns": 4564905
+                                },
+                                "ListVols": {
+                                    "count": 1,
+                                    "acc_time_ns": 139682
+                                },
+                                "ReadXL": {
+                                    "count": 3,
+                                    "acc_time_ns": 512981
+                                },
+                                "RenameData": {
+                                    "count": 4,
+                                    "acc_time_ns": 28152122
+                                },
+                                "StatVol": {
+                                    "count": 2,
+                                    "acc_time_ns": 14513
+                                }
+                            },
+                            "apiCalls": {
+                                "AppendFile": 0,
+                                "CheckParts": 0,
+                                "CreateFile": 0,
+                                "Delete": 217,
+                                "DeleteAbandonedParts": 0,
+                                "DeleteVersion": 0,
+                                "DeleteVersions": 0,
+                                "DeleteVol": 0,
+                                "DiskInfo": 204,
+                                "ListDir": 0,
+                                "ListVols": 44,
+                                "MakeVol": 1,
+                                "MakeVolBulk": 1,
+                                "ReadAll": 1,
+                                "ReadFile": 0,
+                                "ReadFileStream": 0,
+                                "ReadMultiple": 0,
+                                "ReadVersion": 0,
+                                "ReadXL": 142,
+                                "RenameData": 150,
+                                "RenameFile": 1,
+                                "StatInfoFile": 0,
+                                "StatVol": 138,
+                                "UpdateMetadata": 0,
+                                "VerifyFile": 0,
+                                "WalkDir": 34,
+                                "WriteAll": 1,
+                                "WriteMetadata": 0
+                            }
+                        },
+                        "used_inodes": 62,
+                        "free_inodes": 1048514,
+                        "pool_index": 0,
+                        "set_index": 0,
+                        "disk_index": 1
+                    },
+                    {
+                        "endpoint": "/mnt/disk3",
+                        "path": "/mnt/disk3",
+                        "state": "ok",
+                        "uuid": "f0352632-86bc-4c90-bf08-f85d9e4f741e",
+                        "major": 252,
+                        "minor": 48,
+                        "totalspace": 2136997888,
+                        "usedspace": 48951296,
+                        "availspace": 2088046592,
+                        "metrics": {
+                            "lastMinute": {
+                                "Delete": {
+                                    "count": 6,
+                                    "acc_time_ns": 284225
+                                },
+                                "DiskInfo": {
+                                    "count": 5,
+                                    "acc_time_ns": 1462745
+                                },
+                                "ListVols": {
+                                    "count": 1,
+                                    "acc_time_ns": 55535
+                                },
+                                "ReadXL": {
+                                    "count": 3,
+                                    "acc_time_ns": 373598
+                                },
+                                "RenameData": {
+                                    "count": 4,
+                                    "acc_time_ns": 24123326
+                                },
+                                "StatVol": {
+                                    "count": 2,
+                                    "acc_time_ns": 13623
+                                }
+                            },
+                            "apiCalls": {
+                                "AppendFile": 0,
+                                "CheckParts": 0,
+                                "CreateFile": 0,
+                                "Delete": 217,
+                                "DeleteAbandonedParts": 0,
+                                "DeleteVersion": 0,
+                                "DeleteVersions": 0,
+                                "DeleteVol": 0,
+                                "DiskInfo": 204,
+                                "ListDir": 0,
+                                "ListVols": 44,
+                                "MakeVol": 1,
+                                "MakeVolBulk": 1,
+                                "ReadAll": 1,
+                                "ReadFile": 0,
+                                "ReadFileStream": 0,
+                                "ReadMultiple": 0,
+                                "ReadVersion": 0,
+                                "ReadXL": 142,
+                                "RenameData": 150,
+                                "RenameFile": 1,
+                                "StatInfoFile": 0,
+                                "StatVol": 138,
+                                "UpdateMetadata": 0,
+                                "VerifyFile": 0,
+                                "WalkDir": 34,
+                                "WriteAll": 1,
+                                "WriteMetadata": 0
+                            }
+                        },
+                        "used_inodes": 62,
+                        "free_inodes": 1048514,
+                        "pool_index": 0,
+                        "set_index": 0,
+                        "disk_index": 2
+                    },
+                    {
+                        "endpoint": "/mnt/disk4",
+                        "path": "/mnt/disk4",
+                        "state": "ok",
+                        "uuid": "bc1e4fbe-94dd-4d08-87b3-ea083d3f7901",
+                        "major": 252,
+                        "minor": 64,
+                        "totalspace": 2136997888,
+                        "usedspace": 48951296,
+                        "availspace": 2088046592,
+                        "metrics": {
+                            "lastMinute": {
+                                "Delete": {
+                                    "count": 6,
+                                    "acc_time_ns": 431334
+                                },
+                                "DiskInfo": {
+                                    "count": 5,
+                                    "acc_time_ns": 1967994
+                                },
+                                "ListVols": {
+                                    "count": 1,
+                                    "acc_time_ns": 269966
+                                },
+                                "ReadXL": {
+                                    "count": 3,
+                                    "acc_time_ns": 520924
+                                },
+                                "RenameData": {
+                                    "count": 4,
+                                    "acc_time_ns": 27913363
+                                },
+                                "StatVol": {
+                                    "count": 2,
+                                    "acc_time_ns": 34167
+                                }
+                            },
+                            "apiCalls": {
+                                "AppendFile": 0,
+                                "CheckParts": 0,
+                                "CreateFile": 0,
+                                "Delete": 217,
+                                "DeleteAbandonedParts": 0,
+                                "DeleteVersion": 0,
+                                "DeleteVersions": 0,
+                                "DeleteVol": 0,
+                                "DiskInfo": 204,
+                                "ListDir": 0,
+                                "ListVols": 44,
+                                "MakeVol": 1,
+                                "MakeVolBulk": 1,
+                                "ReadAll": 1,
+                                "ReadFile": 0,
+                                "ReadFileStream": 0,
+                                "ReadMultiple": 0,
+                                "ReadVersion": 0,
+                                "ReadXL": 142,
+                                "RenameData": 150,
+                                "RenameFile": 1,
+                                "StatInfoFile": 0,
+                                "StatVol": 138,
+                                "UpdateMetadata": 0,
+                                "VerifyFile": 0,
+                                "WalkDir": 34,
+                                "WriteAll": 1,
+                                "WriteMetadata": 0
+                            }
+                        },
+                        "used_inodes": 62,
+                        "free_inodes": 1048514,
+                        "pool_index": 0,
+                        "set_index": 0,
+                        "disk_index": 3
+                    }
+                ],
+                "mem_stats": {
+                    "Alloc": 174713264,
+                    "TotalAlloc": 973086688,
+                    "Mallocs": 987965,
+                    "Frees": 897620,
+                    "HeapAlloc": 174713264
+                },
+                "go_max_procs": 2,
+                "num_cpu": 2,
+                "runtime_version": "go1.21.1",
+                "gc_stats": {
+                    "last_gc": "2023-10-07T22:52:20.594777319Z",
+                    "num_gc": 26,
+                    "pause_total": 10654040,
+                    "pause": [
+                        51882,
+                        89729,
+                        50875,
+                        33586,
+                        56077
+                    ],
+                    "pause_end": [
+                        "2023-10-07T22:16:34.606599998Z",
+                        "2023-10-07T22:16:34.546945196Z",
+                        "2023-10-07T22:16:34.526998723Z",
+                        "2023-10-07T22:16:34.492243448Z",
+                        "2023-10-07T22:16:34.423134705Z"
+                    ]
+                },
+                "minio_env_vars": {
+                    "MINIO_ROOT_PASSWORD": "*** EXISTS, REDACTED ***",
+                    "MINIO_ROOT_USER": "*** EXISTS, REDACTED ***",
+                    "MINIO_STORAGE_CLASS_STANDARD": "EC:1",
+                    "MINIO_VOLUMES": "/mnt/disk{1...4}"
+                }
+            }
+        ],
+        "pools": {
+            "0": {
+                "0": {
+                    "id": 0,
+                    "rawUsage": 195805184,
+                    "rawCapacity": 8547991552,
+                    "usage": 328,
+                    "objectsCount": 1,
+                    "versionsCount": 0,
+                    "deleteMarkersCount": 0,
+                    "healDisks": 0
+                }
+            }
+        }
+    }
+}
+rob@minio-test:~$ 
+
+rob@minio-test:~$ mc admin heal minio 
+No active healing is detected for new disks.
+rob@minio-test:~$ 
+
+
+
+
+
+http://192.168.122.181:9000/public1/minio-notes
+
+pip3 install minio
+
+from minio import Minio
+from minio.error import S3Error
+
+m = Minio(
+        endpoint="192.168.122.181:9000",
+        secure=False,
+        access_key="rob",
+        secret_key="beerbeer"
+    )
+
+
+
+https://github.com/minio/minio-py/blob/master/examples/set_bucket_policy.py
+
+>>> policy
+{'Version': '2012-10-17', 'Statement': [{'Effect': 'Allow', 'Principal': {'AWS': ['*']}, 'Action': ['s3:GetBucketLocation', 's3:ListBucket'], 'Resource': ['arn:aws:s3:::public1']}, {'Effect': 'Allow', 'Principal': {'AWS': ['*']}, 'Action': ['s3:GetObject'], 'Resource': ['arn:aws:s3:::public1/*']}]}
+
+>>> policy
+{'Version': '2012-10-17', 'Statement': [{'Effect': 'Allow', 'Principal': {'AWS': ['*']}, 'Action': ['s3:GetBucketLocation', 's3:ListBucket'], 'Resource': ['arn:aws:s3:::6c617261']}, {'Effect': 'Allow', 'Principal': {'AWS': ['*']}, 'Action': ['s3:GetObject'], 'Resource': ['arn:aws:s3:::6c617261/*']}]}
+>>> m.set_bucket_policy("6c617261", json.dumps(policy))
+>>> m.get_bucket_policy("6c617261")
+'{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":["*"]},"Action":["s3:GetBucketLocation","s3:ListBucket"],"Resource":["arn:aws:s3:::6c617261"]},{"Effect":"Allow","Principal":{"AWS":["*"]},"Action":["s3:GetObject"],"Resource":["arn:aws:s3:::6c617261/*"]}]}'
+>>> 
+
+
