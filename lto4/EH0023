@@ -1,0 +1,23 @@
+
+root@mcp:/home/rob/md2# ll backups/sn* kvm/media-server/* 
+-rw-r--r-- 1 root root   5384811770 May  5 17:01 backups/snowball.vda.qcow2.20240505.rz
+-rw-r--r-- 1 root root    122789319 May  5 17:01 backups/snowball.vdb.qcow2.20240505.rz
+-rw------- 1 rob  rob    2148073472 May  5 21:27 kvm/media-server/media-server.vda.qcow2
+-rw-r--r-- 1 root root  21474836480 May  5 21:27 kvm/media-server/media-server.vdb.workbench-disk.img
+-rw-r--r-- 1 root root 268435456000 May  5 21:27 kvm/media-server/media-server.vdc.media-disk.img
+-rw-rw-r-- 1 rob  rob  268435456000 May  5 21:27 kvm/media-server/media-server.vdd.rlph-workbench-disk.img
+-rw-r--r-- 1 rob  rob  137438953472 Apr 27 20:24 kvm/media-server/nginx.vdb.data.media.img
+-rw-r--r-- 1 rob  rob  137438953472 Apr 27 20:24 kvm/media-server/nginx.vdc.img
+root@mcp:/home/rob/md2# date
+Sun 05 May 2024 09:27:58 PM CDT
+root@mcp:/home/rob/md2# mt -f /dev/nst0 rewind
+root@mcp:/home/rob/md2# mt -f /dev/nst0 status
+drive type = 114
+drive status = 1174405120
+sense key error = 0
+residue count = 0
+file number = 0
+block number = 0
+root@mcp:/home/rob/md2# tar cf - backups/sn* kvm/media-server/*   | mbuffer --tapeaware -m 4G -s 2M -L -P 80 -o /dev/nst0
+
+
