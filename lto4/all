@@ -30,6 +30,10 @@ NOTSUREWHICH-CURRENT
 $ sudo mbuffer -i /home/rob/md0/disks/rlph.img -o /dev/st0 -s 1M -P 80 -m 2G -L --tapeaware 
 in @  0.0 kiB/s, out @  0.0 kiB/s,  373 GiB total, buffer   0% full, 100% donee
 summary:  373 GiByte in 1h 18min 50.7sec - average of 80.6 MiB/s
+
+$ sudo mbuffer -o /home/rob/md0/restore-test -i /dev/st0 -s 1M -P 80 -m 2G -L --tapeaware 
+in @  0.0 kiB/s, out @ 14.0 MiB/s,  373 GiB total, buffer   0% fulll
+summary:  373 GiByte in 4h 03min 09.4sec - average of 26.1 MiB/s
 ```
 
 
