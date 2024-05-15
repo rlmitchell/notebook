@@ -21,9 +21,16 @@ EH0023
 EH0024
 
 
+
+
 EH0022 - in drive
+```
+2024.05.14 - backup
 
-
+$ sudo mbuffer -i /home/rob/md2/disks/media.img -o /dev/st0 -s 1M -P 80 -m 2G -L --tapeaware
+in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
+summary:  652 GiByte in 2h 05min 49.3sec - average of 88.4 MiB/s, 113x empty
+```
 
 EH0020 - office closet
 ```
