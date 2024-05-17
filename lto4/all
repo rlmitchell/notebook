@@ -23,7 +23,7 @@ EH0024
 
 
 
-EH0022 - in drive
+EH0022 - office closet
 ```
 2024.05.17 - backup
 
@@ -32,7 +32,6 @@ EH0022 - in drive
 in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
 MD5 hash: 41a506e11002a13b3f26183e65945e4b
 summary:  652 GiByte in 2h 03min 09.6sec - average of 90.3 MiB/s, 113x empty
-
 
 in @  0.0 kiB/s, out @ 2047 kiB/s,  652 GiB total, buffer   0% fulll
 MD5 hash: 41a506e11002a13b3f26183e65945e4b
