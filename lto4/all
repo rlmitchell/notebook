@@ -1,26 +1,4 @@
 
-OX6073 - office closet
-```
-2024.05.21 - backup
-
-rob@mcp:~/md0/repos/notebook/lto4$ ll /home/rob/md2/disks/media.img
--rw-rw-r-- 1 rob rob 700000000000 May 21 21:04 /home/rob/md2/disks/media.img
-rob@mcp:~/md0/repos/notebook/lto4$ ./media-disk.sh 
-in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
-MD5 hash: 5c0ac898b43b27d8f4dfb59354bfe009
-summary:  652 GiByte in 1h 55min 38.2sec - average of 96.2 MiB/s, 110x empty
-
-
-in @  0.0 kiB/s, out @ 18.0 MiB/s,  652 GiB total, buffer   0% fulll
-MD5 hash: 5c0ac898b43b27d8f4dfb59354bfe009
-summary:  652 GiByte in 5h 55min 33.6sec - average of 31.3 MiB/s
-0
-rob@mcp:~/md0/repos/notebook/lto4$ /usr/bin/time md5sum /home/rob/md2/disks/media.img 
-5c0ac898b43b27d8f4dfb59354bfe009  /home/rob/md2/disks/media.img
-1478.65user 296.08system 1:46:12elapsed 27%CPU (0avgtext+0avgdata 2004maxresident)k
-1366239056inputs+0outputs (1major+82minor)pagefaults 0swaps
-rob@mcp:~/md0/repos/notebook/lto4$ 
-```
 
 
 
@@ -39,10 +17,40 @@ OX6074
 
 EH0021
 
-EH0023
 
 EH0024
 
+
+
+EH0023 - in drive
+
+
+
+
+
+
+OX6073 - office closet
+```
+2024.05.21 - backup
+
+rob@mcp:~/md0/repos/notebook/lto4$ ll /home/rob/md2/disks/media.img
+-rw-rw-r-- 1 rob rob 700000000000 May 21 21:04 /home/rob/md2/disks/media.img
+rob@mcp:~/md0/repos/notebook/lto4$ ./media-disk.sh
+in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
+MD5 hash: 5c0ac898b43b27d8f4dfb59354bfe009
+summary:  652 GiByte in 1h 55min 38.2sec - average of 96.2 MiB/s, 110x empty
+
+
+in @  0.0 kiB/s, out @ 18.0 MiB/s,  652 GiB total, buffer   0% fulll
+MD5 hash: 5c0ac898b43b27d8f4dfb59354bfe009
+summary:  652 GiByte in 5h 55min 33.6sec - average of 31.3 MiB/s
+0
+rob@mcp:~/md0/repos/notebook/lto4$ /usr/bin/time md5sum /home/rob/md2/disks/media.img
+5c0ac898b43b27d8f4dfb59354bfe009  /home/rob/md2/disks/media.img
+1478.65user 296.08system 1:46:12elapsed 27%CPU (0avgtext+0avgdata 2004maxresident)k
+1366239056inputs+0outputs (1major+82minor)pagefaults 0swaps
+rob@mcp:~/md0/repos/notebook/lto4$
+```
 
 
 
@@ -61,6 +69,8 @@ MD5 hash: 41a506e11002a13b3f26183e65945e4b
 summary:  652 GiByte in 5h 19min 05.3sec - average of 34.9 MiB/s
 0
 ```
+
+
 
 EH0020 - office closet
 ```
