@@ -31,7 +31,7 @@ EH0023 - in drive
 
 OX6073 - office closet
 ```
-2024.05.21 - backup
+2024.05.21 - backup /home/rob/md2/disks/media.img
 
 rob@mcp:~/md0/repos/notebook/lto4$ ll /home/rob/md2/disks/media.img
 -rw-rw-r-- 1 rob rob 700000000000 May 21 21:04 /home/rob/md2/disks/media.img
@@ -56,9 +56,7 @@ rob@mcp:~/md0/repos/notebook/lto4$
 
 EH0022 - office closet
 ```
-2024.05.17 - backup
-
-/home/rob/md2/disks/media.img
+2024.05.17 - backup /home/rob/md2/disks/media.img
 
 in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
 MD5 hash: 41a506e11002a13b3f26183e65945e4b
@@ -74,7 +72,7 @@ summary:  652 GiByte in 5h 19min 05.3sec - average of 34.9 MiB/s
 
 EH0020 - office closet
 ```
-2024.05.13 - backup
+2024.05.13 - backup /home/rob/md0/disks/rlph.img
 
 $ sudo mbuffer -i /home/rob/md0/disks/rlph.img -o /dev/st0 -s 1M -P 80 -m 2G -L --tapeaware 
 in @  0.0 kiB/s, out @  0.0 kiB/s,  373 GiB total, buffer   0% full, 100% donee
