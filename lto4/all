@@ -15,14 +15,14 @@ OX3502
 OX6074
  - NOT VERIFIED WORKING
 
-EH0021
+EH0021 - in drive
 
 
 EH0024
 
 
 
-EH0023 - in drive
+EH0023 - office closet
 ```
 rob@mcp:~/md0/repos/notebook/lto4$ ./media-disk.sh /home/rob/md0/disks/rlph.img 
 20240525.2313
