@@ -23,7 +23,68 @@ EH0024
 
 
 EH0023 - in drive
+```
+rob@mcp:~/md0/repos/notebook/lto4$ ./media-disk.sh /home/rob/md0/disks/rlph.img 
+20240525.2313
+removing restore test file
+1716696839
+1716696839
+rewind
+status:
+1716696839
+SCSI 2 tape drive:
+File number=0, block number=0, partition=0.
+Tape block size 0 bytes. Density code 0x46 (LTO-4).
+Soft error count since last status=0
+General status bits on (41010000):
+ BOT ONLINE IM_REP_EN
+1716696839
 
+sudo mbuffer -H -i /home/rob/md0/disks/rlph.img -o /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware
+1716696839
+in @  0.0 kiB/s, out @  0.0 kiB/s,  373 GiB total, buffer   0% full, 100% donee
+MD5 hash: f97036de7589d3359f54c0c32c049427
+summary:  373 GiByte in 1h 33min 41.1sec - average of 67.9 MiB/s, 23x empty
+1716702464
+
+sleep
+
+
+rewind
+status:
+1716702494
+SCSI 2 tape drive:
+File number=0, block number=0, partition=0.
+Tape block size 0 bytes. Density code 0x46 (LTO-4).
+Soft error count since last status=0
+General status bits on (41010000):
+ BOT ONLINE IM_REP_EN
+1716702494
+
+sudo mbuffer -H -o /home/rob/md0/restore-test -i /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware
+1716702494
+in @  0.0 kiB/s, out @ 10.0 MiB/s,  373 GiB total, buffer   0% fulll
+MD5 hash: f97036de7589d3359f54c0c32c049427
+summary:  373 GiByte in 2h 46min 33.2sec - average of 38.2 MiB/s
+1716712578
+
+sleep
+rewind
+status:
+1716712608
+SCSI 2 tape drive:
+File number=0, block number=0, partition=0.
+Tape block size 0 bytes. Density code 0x46 (LTO-4).
+Soft error count since last status=0
+General status bits on (41010000):
+ BOT ONLINE IM_REP_EN
+1716712608
+
+cmp /home/rob/md0/restore-test /home/rob/md0/disks/rlph.img
+1716712608
+0
+1716719489
+```
 
 
 
