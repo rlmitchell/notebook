@@ -2,27 +2,20 @@
 
 
 
-OX3264
- - NOT VERIFIED WORKING
-OX5876
- - NOT VERIFIED WORKING
-OX5878
- - NOT VERIFIED WORKING
-OX2391
- - NOT VERIFIED WORKING
-OX3502
- - NOT VERIFIED WORKING
-OX6074
- - NOT VERIFIED WORKING
+tape: OX3264
+tape: OX5876
+tape: OX5878
+tape: OX2391
+tape: OX3502
+tape: OX6074
+tape: EH0024
 
-EH0021 - in drive
-
-
-EH0024
+tape: EH0021 - in drive
 
 
 
-EH0023 - office closet
+
+tape: EH0023 - 20240525.2313 office-closet /home/rob/md0/disks/rlph.img  restore-verified-mounted
 ```
 rob@mcp:~/md0/repos/notebook/lto4$ ./media-disk.sh /home/rob/md0/disks/rlph.img 
 20240525.2313
@@ -88,9 +81,7 @@ cmp /home/rob/md0/restore-test /home/rob/md0/disks/rlph.img
 
 
 
-
-
-OX6073 - office closet
+tape: OX6073 - 2024.05.21    office-closet /home/rob/md2/disks/media.img 
 ```
 2024.05.21 - backup /home/rob/md2/disks/media.img
 
@@ -115,7 +106,7 @@ rob@mcp:~/md0/repos/notebook/lto4$
 
 
 
-EH0022 - office closet
+tape: EH0022 - 2024.05.17    office-closet /home/rob/md2/disks/media.img 
 ```
 2024.05.17 - backup /home/rob/md2/disks/media.img
 
@@ -130,8 +121,7 @@ summary:  652 GiByte in 5h 19min 05.3sec - average of 34.9 MiB/s
 ```
 
 
-
-EH0020 - office closet
+tape: EH0020 - 2024.05.13    office-closet /home/rob/md0/disks/rlph.img
 ```
 2024.05.13 - backup /home/rob/md0/disks/rlph.img
 
