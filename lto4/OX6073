@@ -1,0 +1,5 @@
+root@mcp:~# mbuffer -H -i /home/rob/md2/backups/rlph.img.20240712.0942.49d7b43926b001b27d7f5d8409faccb5 -o /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware; mt -f /dev/st0 eject
+in @  0.0 kiB/s, out @  0.0 kiB/s,  373 GiB total, buffer   0% full, 100% donee
+MD5 hash: 49d7b43926b001b27d7f5d8409faccb5
+summary:  373 GiByte in 2h 02min 30.7sec - average of 51.9 MiB/s
+home office shelf
