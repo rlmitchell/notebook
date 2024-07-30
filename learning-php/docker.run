@@ -1,0 +1,12 @@
+
+docker run -d --rm --name learning-php--php \
+ -p 9000:9000 \
+ -v ${PWD}/src:/var/www/html \
+ php:8-fpm
+
+docker run -d --rm --name learning-php--nginx \
+ -p 80:80 \
+ -v ${PWD}/src:/var/www/html \
+ -v ${PWD}/default.conf:/etc/nginx/conf.d/default.conf \
+ nginx:1.27
+
