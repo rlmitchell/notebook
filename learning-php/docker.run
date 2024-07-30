@@ -1,12 +1,20 @@
 
 docker run -d --rm --name learning-php--php \
  -p 9000:9000 \
+ -v ${PWD}/php.ini:/usr/local/etc/php/php.ini \
  -v ${PWD}/src:/var/www/html \
- php:8-fpm
+ php:5-fpm
+# php:8-fpm
 
 docker run -d --rm --name learning-php--nginx \
  -p 80:80 \
  -v ${PWD}/src:/var/www/html \
  -v ${PWD}/default.conf:/etc/nginx/conf.d/default.conf \
  nginx:1.27
+
+
+docker cp ZendFramework-1.12.3/bin/classmap_generator.php  learning-php--php:/usr/local/bin/classmap_generator.php
+docker cp ZendFramework-1.12.3/bin/zf.sh learning-php--php:/usr/local/bin/zf.sh
+docker cp ZendFramework-1.12.3/bin/zf.php learning-php--php:/usr/local/bin/zf.php
+
 
