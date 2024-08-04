@@ -1,0 +1,5 @@
+# mbuffer -H -i /home/rob/md2/backups/media.img.20240730.1801.8d102b78c13ddbb8d00edc72b579237e  -o /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware; mt -f /dev/st0 eject 
+in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
+MD5 hash: 8d102b78c13ddbb8d00edc72b579237e
+summary:  652 GiByte in 2h 35min 35.5sec - average of 71.5 MiB/s, 103x empty
+
