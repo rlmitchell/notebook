@@ -1,0 +1,14 @@
+root@mcp:/mnt/data2/repos/notebook/lto4# mt -t /dev/st0 status
+SCSI 2 tape drive:
+File number=0, block number=0, partition=0.
+Tape block size 0 bytes. Density code 0x46 (LTO-4).
+Soft error count since last status=0
+General status bits on (41010000):
+ BOT ONLINE IM_REP_EN
+root@mcp:/mnt/data2/repos/notebook/lto4# 
+root@mcp:/mnt/data2/repos/notebook/lto4# mbuffer -H -i /home/rob/md0/disks/data4.img  -o /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware; mt -f /dev/st0 eject
+in @  0.0 kiB/s, out @  0.0 kiB/s,  740 GiB total, buffer   0% full, 100% done
+MD5 hash: 2ff6d6c2a686714395dd45d37c006474
+summary:  740 GiByte in 2h 20min 30.1sec - average of 89.9 MiB/s, 13x empty
+root@mcp:/mnt/data2/repos/notebook/lto4# 
+
