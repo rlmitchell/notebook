@@ -1,0 +1,2 @@
+# install command:  bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+apt -y install git
