@@ -2,4 +2,5 @@
 apt -y install git
 mkdir /home/rob/repos 2>/dev/null
 groupadd docker 2>/dev/null
+usermod -aG docker rob 2>/dev/null #  $USER
 
