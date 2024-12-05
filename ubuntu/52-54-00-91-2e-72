@@ -1,3 +1,5 @@
 # install command:  sudo bash -c "$(curl -L https://raw.githubusercontent.com/rlmitchell/notebook/refs/heads/main/ubuntu/52-54-00-91-2e-72)"
 apt -y install git
 mkdir /home/rob/repos 2>/dev/null
+groupadd docker 2>/dev/null
+
