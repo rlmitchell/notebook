@@ -1,2 +1,3 @@
-# install command:  bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+# install command:  bash -c "$(curl -L https://https://raw.githubusercontent.com/rlmitchell/notebook/refs/heads/main/ubuntu/52-54-00-91-2e-72)"
+apt -y install vim
 apt -y install git
