@@ -1,0 +1,14 @@
+root@mcp:/home/rob/md2/disks# ll
+total 684261988
+drwxr-xr-x  2 rob rob         4096 Aug 28 09:39 ./
+drwxr-xr-x 22 rob rob         4096 Sep  6 14:23 ../
+-rw-rw-r--  1 rob rob 700000000000 Sep 22 22:09 media.img
+-rw-------  1 rob rob            0 Aug 24 17:32 nohup.out
+root@mcp:/home/rob/md2/disks# mbuffer -H -i /home/rob/md2/disks/media.img  -o /dev/st0 -s 1M -P 10 -m 8G -L --tapeaware
+in @  0.0 kiB/s, out @  0.0 kiB/s,  652 GiB total, buffer   0% full, 100% donee
+MD5 hash: 9f206d3201433ee9e3535df77bea0a3b
+summary:  652 GiByte in 6h 34min 20.6sec - average of 28.2 MiB/s, 368x empty
+root@mcp:/home/rob/md2/disks# md5sum /home/rob/md2/disks/media.img
+9f206d3201433ee9e3535df77bea0a3b  /home/rob/md2/disks/media.img
+root@mcp:/home/rob/md2/disks# mt -t /dev/st0 eject 
+
