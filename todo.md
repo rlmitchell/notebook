@@ -1,0 +1,2 @@
+- fix minio notes
+- cloudwatch unittests, saif asked if its working
