@@ -18,6 +18,7 @@
 - [delete an individual certificate](letsencrypt/1671645191.delete-individual-certificate.md)
 
 ### linux
+- [expand qcow2 kvm disk](linux/20260930.linux.kvm-expand-partition-and-filesystem.md)
 - [create and mount encrypted disk image](linux/1672085858.create-and-mount-luks-disk-image-file.md)
 - [ubuntu 20.04 disable auto-updates](ubuntu/1672000545.ubuntu-2004-disable-auto-updates.md)
 - [ubuntu 20.04 netplan single interface multiple ip addresses](ubuntu/1672001649.ubuntu-2004-netplan-single-interface-multiple-ip-addresses.md)
